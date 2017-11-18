@@ -1,18 +1,7 @@
 package com.thoughtworks.demo;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
+public interface UserRepository extends CrudRepository<User, String> {
 
-@Repository
-@Transactional
-public class UserRepository {
-  @PersistenceContext
-  private EntityManager entityManager;
-
-  public void create(User user) {
-    entityManager.persist(user);
-  }
 }

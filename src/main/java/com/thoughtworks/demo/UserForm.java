@@ -1,23 +1,17 @@
 package com.thoughtworks.demo;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
-class User {
-  @Id
-  private ObjectId _id;
-  private String firstName;
-  private String lastName;
+public class UserForm {
+  private String id;
+   String firstName;
+   String lastName;
   private int age;
 
-  public ObjectId getId() {
-    return _id;
+  public String getId() {
+    return id;
   }
 
-  public void setId(ObjectId _id) {
-    this._id = _id;
+  public void setId(String id) {
+    this.id = id;
   }
 
   public String getFirstName() {
@@ -43,4 +37,5 @@ class User {
   public void setAge(int age) {
     this.age = age;
   }
+
 }
