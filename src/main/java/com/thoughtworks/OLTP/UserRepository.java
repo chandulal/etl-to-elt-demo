@@ -1,4 +1,4 @@
-package com.thoughtworks.demo;
+package com.thoughtworks.OLTP;
 
 import org.springframework.data.repository.CrudRepository;
 

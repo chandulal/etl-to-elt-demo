@@ -2,11 +2,11 @@
     <changeSet changeId="init" author="chandu">
         <script>
             db.user.insert({
-            "firstName" : "Rajesh", "lastName" : "Chauhan", "age" : 12 });
+            "firstName" : "Rajesh", "lastName" : "Chauhan", "age" : NumberInt(12) });
             db.user.insert({
-            "firstName" : "Vijay", "lastName" : "Patel", "age" : 15 });
+            "firstName" : "Vijay", "lastName" : "Patel", "age" : NumberInt(15) });
             db.user.insert({
-            "firstName" : "Rahul", "lastName" : "Joshi", "age" : 30 });
+            "firstName" : "Rahul", "lastName" : "Joshi", "age" : NumberInt(30) });
         </script>
     </changeSet>
 </mongoChangeLog>

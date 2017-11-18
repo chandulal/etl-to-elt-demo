@@ -1,17 +1,23 @@
-package com.thoughtworks.demo;
+package com.thoughtworks.OLTP;
 
-public class UserForm {
-  private String id;
-   String firstName;
-   String lastName;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class User {
+  @Id
+  private ObjectId _id;
+  private String firstName;
+  private String lastName;
   private int age;
 
-  public String getId() {
-    return id;
+  public ObjectId getId() {
+    return _id;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setId(ObjectId _id) {
+    this._id = _id;
   }
 
   public String getFirstName() {
@@ -37,5 +43,4 @@ public class UserForm {
   public void setAge(int age) {
     this.age = age;
   }
-
 }

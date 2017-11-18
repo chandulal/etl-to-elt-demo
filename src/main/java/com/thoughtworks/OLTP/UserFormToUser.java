@@ -1,4 +1,4 @@
-package com.thoughtworks.demo;
+package com.thoughtworks.OLTP;
 
 import org.bson.types.ObjectId;
 import org.springframework.core.convert.converter.Converter;
