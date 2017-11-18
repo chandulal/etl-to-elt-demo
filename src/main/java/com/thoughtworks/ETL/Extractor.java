@@ -4,16 +4,14 @@ package com.thoughtworks.ETL;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Extractor {
-  public static void main(String[] args) throws UnknownHostException {
+  public static void main(String[] args) {
     MongoClient mongo = null;
     try {
       mongo = new MongoClient("localhost", 12345);
