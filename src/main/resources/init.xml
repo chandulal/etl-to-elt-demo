@@ -1,0 +1,12 @@
+<mongoChangeLog>
+    <changeSet changeId="init" author="chandu">
+        <script>
+            db.user.insert({
+            "firstName" : "Rajesh", "lastName" : "Chauhan", "age" : 12 });
+            db.user.insert({
+            "firstName" : "Vijay", "lastName" : "Patel", "age" : 15 });
+            db.user.insert({
+            "firstName" : "Rahul", "lastName" : "Joshi", "age" : 30 });
+        </script>
+    </changeSet>
+</mongoChangeLog>

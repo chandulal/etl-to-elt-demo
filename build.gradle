@@ -32,4 +32,5 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
     compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo'
     compile group: 'cz.jirutka.spring', name: 'embedmongo-spring', version: '1.1'
+    compile group: 'org.mongeez', name: 'mongeez', version: '0.9.6'
 }
