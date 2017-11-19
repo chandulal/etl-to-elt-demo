@@ -17,7 +17,7 @@ apply plugin: 'org.springframework.boot'
 
 group = 'com.thoughtworks'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -26,7 +26,6 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web-services'
-    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml'
     compile 'org.springframework.boot:spring-boot-starter-test'
     runtime 'org.springframework.boot:spring-boot-devtools'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
@@ -35,4 +34,12 @@ dependencies {
     compile group: 'org.mongeez', name: 'mongeez', version: '0.9.6'
     compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '1.2.0.RELEASE'
     compile group: 'org.apache.kafka', name: 'connect-json', version: '1.0.0'
+    compile('org.apache.spark:spark-streaming-kafka-0-10_2.11:2.2.0') {
+        exclude group: 'org.slf4j'
+        exclude group: 'log4j-over-slf4j'
+    }
+    compile('org.apache.spark:spark-streaming_2.11:2.1.0') {
+        exclude group: 'org.slf4j'
+        exclude group: 'log4j-over-slf4j'
+    }
 }
