@@ -26,7 +26,7 @@ public class UserController {
   @RequestMapping(value = "/create", method = RequestMethod.POST)
   public Map<String, String> postUser(@RequestBody UserForm user) {
     try {
-      userService.saveOrUpdateProductForm(user);
+      userService.saveOrUpdateUser(user);
       logger.info("success");
       response.put("status", "success");
     } catch (Exception e) {

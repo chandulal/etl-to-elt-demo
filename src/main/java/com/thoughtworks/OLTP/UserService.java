@@ -1,5 +1,6 @@
 package com.thoughtworks.OLTP;
 
+import com.thoughtworks.ELT.Extractor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +13,13 @@ public class UserService {
   private UserRepository userRepository;
   @Autowired
   private UserFormToUser userFormToUser;
+  @Autowired
+  private Extractor extractor;
 
-  public User saveOrUpdateProductForm(UserForm userForm) {
+  public User saveOrUpdateUser(UserForm userForm) {
     User savedUser = saveOrUpdate(userFormToUser.convert(userForm));
-    System.out.println("Saved Product Id: " + savedUser.getId());
+    System.out.println("Saved User Id: " + savedUser.getId());
+    extractor.send("helloworld.t", savedUser.getFirstName());
     return savedUser;
   }
 

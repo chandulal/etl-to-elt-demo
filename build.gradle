@@ -33,4 +33,5 @@ dependencies {
     compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo'
     compile group: 'cz.jirutka.spring', name: 'embedmongo-spring', version: '1.1'
     compile group: 'org.mongeez', name: 'mongeez', version: '0.9.6'
+    compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '1.2.0.RELEASE'
 }
