@@ -35,6 +35,20 @@ public class UserController {
     }
     return response;
   }
+
+  @RequestMapping(value = "/add", method = RequestMethod.POST)
+  public Map<String, String> addUser(@RequestBody UserForm user) {
+    try {
+      userService.addOrUpdateUser(user);
+      logger.info("success");
+      response.put("status", "success");
+    } catch (Exception e) {
+      logger.error("Error occurred while trying to process api request", e);
+      response.put("status", "fail");
+    }
+    return response;
+  }
+
   @RequestMapping(value = "/list", method = RequestMethod.GET)
   public Map<String, String> getAllUsers() {
     try {

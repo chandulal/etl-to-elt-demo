@@ -1,9 +1,11 @@
 package com.thoughtworks.OLTP;
 
-public class UserForm {
+import java.io.Serializable;
+
+public class UserForm implements Serializable {
   private String id;
-   String firstName;
-   String lastName;
+  String firstName;
+  String lastName;
   private int age;
 
   public String getId() {
